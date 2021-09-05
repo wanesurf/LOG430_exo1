@@ -9,28 +9,26 @@ services:
      - "4000:27017"
     restart: always
 
-  # azure-storage:
-  #   image: azure-storage
-  #   build: 
-  #     context: ./azure-storage
-  #     dockerfile: Dockerfile
-  #   container_name: video-storage
-  #   ports:
-  #    - "4001:80"
-  #   environment:
-  #     - PORT=80
-  #     - STORAGE_ACCOUNT_NAME=<insert your Azure storage account name here>
-  #     - STORAGE_ACCESS_KEY=<insert your Azure storage account access key here>
+  local-storage:
+    tty: true
+    build: 
+      context: ./local-storage
+      dockerfile: Dockerfile
+    container_name: video-storage
+    ports:
+     - "4001:80"
+    environment:
+      - PORT=80
   #   restart: "no"
 
   video-streaming:
     image: video-streaming
     build: 
-      context: ./video-streaming
+      context: ./
       dockerfile: Dockerfile
     container_name: video-streaming
     ports:
-     - "4002:80"
+     - "4002:3000"
     environment:
       - PORT=80
       - DBHOST=mongodb://db:27017

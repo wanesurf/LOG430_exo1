@@ -36,6 +36,8 @@ const PORT = process.env.PORT;
 const VIDEO_STORAGE_HOST = process.env.VIDEO_STORAGE_HOST;
 const VIDEO_STORAGE_PORT = parseInt(process.env.VIDEO_STORAGE_PORT);
 const DBHOST = process.env.DBHOST;
+console.log(process.env.DBHOST);
+
 const DBNAME = process.env.DBNAME;
 
 console.log(`Forwarding video requests to ${VIDEO_STORAGE_HOST}:${VIDEO_STORAGE_PORT}.`);
@@ -45,13 +47,13 @@ function main() {
         .then(client => {
             const db = client.db(DBNAME);
             const videosCollection = db.collection("videos");
-        
             app.get("/video", (req, res) => {
                 const videoId = new mongodb.ObjectID(req.query.id);
+                console.log("this is videoID "+videoId);
                 videosCollection.findOne({ _id: videoId })
                     .then(videoRecord => {
                         if (!videoRecord) {
-                            res.sendStatus(404);
+                            res.send("Renseigner un ID present dans la DB");
                             return;
                         }
 
@@ -61,7 +63,7 @@ function main() {
                             {
                                 host: VIDEO_STORAGE_HOST,
                                 port: VIDEO_STORAGE_PORT,
-                                path:`/video?path=${videoRecord.videoPath}`, // Video path now retrieved from the database.
+                                path:`${videoRecord.videoPath}`, // Video path now retrieved from the database.
                                 method: 'GET',
                                 headers: req.headers
                             }, 
@@ -83,7 +85,7 @@ function main() {
             //
             // Starts the HTTP server.
             //
-            app.listen(PORT, () => {
+            app.listen(3000, () => {
                 console.log(`Microservice listening, please load the data file db-fixture/videos.json into your database before testing this microservice.`);
             });
         });
