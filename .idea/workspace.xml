@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7892c5d4-9df3-4057-b261-060eb79ffbd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-streaming/Docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/Docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-streaming/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-streaming/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-streaming/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-streaming/video-streaming/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-streaming/video-streaming/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-streaming/videos/SampleVideo_1280x720_1mb.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="192" />
+    <option name="totalTimeSeconds" value="3415" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +30,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -41,11 +48,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630877883734</updated>
-      <workItem from="1630877886309" duration="233000" />
+      <workItem from="1630877886309" duration="356000" />
+      <workItem from="1630891180408" duration="2319000" />
+      <workItem from="1631204492990" duration="19000" />
+      <workItem from="1631571076262" duration="1145000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1631571163140">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1631571163140" />
   </component>
 </project>

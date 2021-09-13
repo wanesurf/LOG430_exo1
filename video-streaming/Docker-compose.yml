@@ -1,6 +1,45 @@
 
 version: '3'
 services:
+  video-upload:
+    image: video-upload
+    build:
+      context: ./video-upload
+      dockerfile: Dockerfile
+    container_name: video-upload
+    ports:
+      - 4004:3000
+
+
+  compteur:
+    image: compteur
+    build: 
+      context: ./compteur
+      dockerfile: Dockerfile
+    container_name: Compteur
+    ports:
+    - "4003:3000"
+    environment:
+      - PORT=80
+      - DBHOST=mongodb://db:27017
+      - DBNAME=video-streaming
+      - VIDEO_STORAGE_HOST=video-storage
+      - VIDEO_STORAGE_PORT=80
+      - RABBIT=amqp://guest:guest@rabbit:5672
+    depends_on:
+      - db
+      - rabbit
+    restart: "no"
+  rabbit:
+    image: rabbitmq:3.8.5-management
+    container_name: rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    expose:
+      - "5672"
+      - "15672"
+    restart: always
 
   db:
     image: mongo:4.2.8
@@ -35,6 +74,11 @@ services:
       - DBNAME=video-streaming
       - VIDEO_STORAGE_HOST=video-storage
       - VIDEO_STORAGE_PORT=80
+      - RABBIT=amqp://guest:guest@rabbit:5672
     depends_on:
       - db
+      - rabbit
     restart: "no"
+
+
+    

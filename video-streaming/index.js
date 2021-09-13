@@ -1,6 +1,7 @@
 const express = require("express");
 const http = require("http");
 const mongodb = require("mongodb");
+var amqp = require("amqplib");
 
 const app = express();
 
@@ -37,12 +38,68 @@ const VIDEO_STORAGE_HOST = process.env.VIDEO_STORAGE_HOST;
 const VIDEO_STORAGE_PORT = parseInt(process.env.VIDEO_STORAGE_PORT);
 const DBHOST = process.env.DBHOST;
 console.log(process.env.DBHOST);
+const RABBIT = process.env.RABBIT;
 
 const DBNAME = process.env.DBNAME;
 
 console.log(`Forwarding video requests to ${VIDEO_STORAGE_HOST}:${VIDEO_STORAGE_PORT}.`);
+//
+// Connect to the RabbitMQ server.
+//
+function connectRabbit() {
+
+console.log(`Connecting to RabbitMQ server at ${RABBIT}.`);
+
+     
+ 
+}
+
 
 function main() {
+
+    app.get("/upload",(req,res)=>{
+
+        
+    })
+
+    app.get("/rabbit",(req,res)=>{
+        amqp.connect('amqp://guest:guest@rabbit:5672', function(error0, connection) {
+  if (error0) {
+    throw error0;
+  }
+  connection.createChannel(function(error1, channel) {
+    if (error1) {
+      throw error1;
+    }
+    var queue = 'hello';
+    var msg = 'Hello world';
+
+    channel.assertQueue(queue, {
+      durable: false
+    });
+
+    channel.sendToQueue(queue, Buffer.from(msg));
+    console.log(" [x] Sent %s", msg);
+  });
+});
+    })
+
+    amqp.connect(RABBIT,function(error0, connection) { 
+        console.log("Connected to RabbitMQ.");
+
+        connection.createChannel(function(error1, channel){
+
+        var queue = 'hello';
+        var msg = 'Hello world';
+    
+        channel.assertQueue(queue, {
+            durable: false
+          });        
+        channel.sendToQueue(queue, Buffer.from(msg));
+
+        console.log(" [x] Sent %s"+ msg);
+     })
+    });
     return mongodb.MongoClient.connect(DBHOST) // Connect to the database.
         .then(client => {
             const db = client.db(DBNAME);
