@@ -9,7 +9,10 @@ WORKDIR /var/www/html
 COPY ./videos/index.html index.html
 COPY ./videos/SampleVideo_1280x720_1mb.mp4 ./SampleVideo_1280x720_1mb.mp4
 RUN rm -rf /etc/apache2/sites-enabled/000-default.conf
-RUN chmod -R 775 /var/www/html 
+RUN chmod 777 /var/www/html -R
+RUN chown -R www-data:www-data /var/www/
+RUN chmod -R g+rw /var/www/
+
 RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
     >> /usr/local/apache2/conf/httpd.conf 
 

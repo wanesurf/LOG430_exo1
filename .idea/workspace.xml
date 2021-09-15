@@ -22,8 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7892c5d4-9df3-4057-b261-060eb79ffbd3" name="Default Changelist" comment="upload micro service">
+    <list default="true" id="7892c5d4-9df3-4057-b261-060eb79ffbd3" name="Default Changelist" comment="uplaod vers container">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-streaming/Docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/Docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-streaming/local-storage/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/local-storage/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-streaming/local-storage/demo.apache.conf" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/local-storage/demo.apache.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-streaming/video-upload/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/video-upload/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-streaming/video-upload/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-streaming/video-upload/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="6724" />
+    <option name="totalTimeSeconds" value="14269" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +74,9 @@
       <workItem from="1631571076262" duration="1319000" />
       <workItem from="1631587682398" duration="964000" />
       <workItem from="1631624121040" duration="209000" />
-      <workItem from="1631638454293" duration="2201000" />
+      <workItem from="1631638454293" duration="3788000" />
+      <workItem from="1631654923660" duration="1248000" />
+      <workItem from="1631666083867" duration="3779000" />
     </task>
     <task id="LOCAL-00001" summary="upload micro service">
       <created>1631573390500</created>
@@ -78,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631573390500</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="uplaod vers container">
+      <created>1631641301420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631641301420</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uplaod vers container">
+      <created>1631641311045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631641311046</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,16 +119,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upload micro service" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload micro service" />
+    <MESSAGE value="uplaod vers container" />
+    <option name="LAST_COMMIT_MESSAGE" value="uplaod vers container" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="259" key="Vcs.Push.Dialog.v2" timestamp="1631573392615">
+    <state x="303" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631668955325">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="439" y="259" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1631573392615" />
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1631571163140">
+    <state x="303" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1631668955325" />
+    <state x="439" y="259" key="Vcs.Push.Dialog.v2" timestamp="1631641313275">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1631571163140" />
+    <state x="439" y="259" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1631641313275" />
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1631669760843">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1631669760843" />
   </component>
 </project>
